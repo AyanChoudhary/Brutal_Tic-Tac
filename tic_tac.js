@@ -13,19 +13,27 @@ box.prototype = {
         if (this.checked == "0") 
         {
             if (count%2 == 0) {
+
                 this.element.style.backgroundImage = 'url(zero.png)';
-                if (this.id != "13")
-                {
-                    count++
-                    box13 = new box('13');
-                    box13.clickon();
+                count++;
+
+                if (count < 3) {                  
+                    if (this.id != "13")
+                    {
+                        box13 = new box('13');
+                        box13.clickon();
+                    }
+
+                    else
+                    {
+                        box19 = new box('19');
+                        box19.clickon();
+                    }
                 }
 
-                else
-                {
-                    count++
-                    box19 = new box('19');
-                    box19.clickon();
+                else {
+                    box20 = new box('20');
+                    box20.clickon();
                 }
             }
 
